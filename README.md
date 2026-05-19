@@ -177,6 +177,7 @@ kubectl get svc nginx-service
 * Open in browser:
 ```
 http://<EXTERNAL-IP>
+http://loadbalancer-ip
 ```
 
 * You’ll see:
