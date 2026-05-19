@@ -82,6 +82,7 @@ argocd-app.yaml
 
 # 3. Create NGINX Deployment YAML
 * deployment.yaml
+```
 apiVersion: apps/v1
 kind: Deployment
 metadata:
@@ -101,8 +102,9 @@ spec:
           image: nginx:1.25
           ports:
             - containerPort: 80
-
+```
 * service.yaml
+```
 apiVersion: v1
 kind: Service
 metadata:
@@ -114,7 +116,7 @@ spec:
   ports:
     - port: 80
       targetPort: 80
-
+```
 # 4. Push to Git
 ```
 git init
@@ -125,7 +127,7 @@ git push origin main
 ```
 # 5. Create ArgoCD Application
 * argocd-app.yaml
-
+```
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
@@ -144,7 +146,7 @@ spec:
     automated:
       prune: true
       selfHeal: true
-
+```
 # 6. Apply ArgoCD App
 ```
 kubectl apply -f argocd-app.yaml -n argocd
