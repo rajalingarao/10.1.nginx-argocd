@@ -182,3 +182,16 @@ http://<EXTERNAL-IP>
 * You’ll see:
 👉 “Welcome to nginx!”
 
+```
+Developer → Git (code repo)
+        ↓
+Jenkins (CI builds image)
+        ↓
+Docker registry (ECR)
+        ↓
+Git (CD repo updated with image tag)
+        ↓
+ArgoCD watches Git
+        ↓
+EKS cluster updated automatically
+```
