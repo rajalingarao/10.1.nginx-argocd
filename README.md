@@ -72,12 +72,13 @@ Example repo:
 argocd-nginx-demo/
 
 * Structure:
+```
 argocd-nginx-demo/
-
 nginx/
    deployment.yaml
    service.yaml
 argocd-app.yaml
+```
 
 # 3. Create NGINX Deployment YAML
 * deployment.yaml
